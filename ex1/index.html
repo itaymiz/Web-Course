@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>ex01</title>
+
+    <script>
+        function moreP1 () {
+            document.getElementById("info").style.display = "none";
+            document.getElementById("person2").style.display = "none";
+            document.getElementById("person1").classList.remove("col-sm-4");
+            document.getElementById("p1-more").style.display = "none";
+            document.getElementById("p1-more-info").style.display = "block";
+        }
+        function moreP2(){
+            document.getElementById("info").style.display = "none";
+            document.getElementById("person1").style.display = "none";
+            document.getElementById("person2").classList.remove("col-sm-4");
+            document.getElementById("p2-more").style.display = "none";
+            document.getElementById("p2-more-info").style.display = "block";
+
+        }
+       function lessP1 () {
+            document.getElementById('info').style.display = "block";
+            document.getElementById('person2').style.display = "block";
+            document.getElementById('person1').classList.add("col-sm-4");
+            document.getElementById("p1-more").style.display = "block";
+            document.getElementById("p1-more-info").style.display = "none";
+        }
+       function lessP2 () {
+            document.getElementById('info').style.display = "block";
+            document.getElementById('person1').style.display = "block";
+            document.getElementById('person2').classList.add("col-sm-4");
+            document.getElementById("p2-more").style.display = "block";
+            document.getElementById("p2-more-info").style.display = "none";
+        }
+        // wait for the DOM to be loaded before accessing element to add listeners!
+        document.addEventListener('DOMContentLoaded', function(){
+
+        // all of your event bindings go here
+        document.getElementById('p1-more').addEventListener('click', moreP1);
+        document.getElementById('p2-more').addEventListener('click', moreP2);
+        document.getElementById('p1-less').addEventListener('click', lessP1);
+        document.getElementById('p2-less').addEventListener('click', lessP2);
+
+        }, false);
+    </script>
+</head>
+<body>
+    <div class="container-fluid" style="word-wrap: break-word">
+        <div id="title" class="row">
+            <div class="col-2">
+                <a href="http://cs.hac.ac.il/" target="_blank">
+                    <img src="images/hadassah-logo.png" class="img-fluid" alt="Hadassah Logo">
+                </a>
+            </div>
+            <div class="col-10">
+                <h1 style="text-align: center">
+                    Some title
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div id="info" class="col-12 col-sm-4 border border-primary">
+                <h2>Internet Course</h2>
+                <ul style="font-weight: bold">
+                    <li>Hadassah Academic College</li>
+                    <li>year: 2019-2020</li>
+                    <li>Semester: A</li>
+                    <li>Time: 8:00 - 11:30</li>
+                    <li>Room: 2104</li>
+                </ul>
+                <a href="http://cs.hac.ac.il/" target="_blank">Course Website</a>
+            </div>
+            <div id="person1" class="col-12 col-sm-4 border border-primary">
+                <img src="images/person_1.png" class="img-fluid" alt="person1 image">
+                <h1>Itay Mizrahi</h1>
+                <p>
+                    information information information information information information
+                    information information information information information information
+                    information information information information information information
+                    information information information information information information
+                    information information information information information information
+                </p>
+                <h2>email: *******@gmail.com</h2>
+                <button id="p1-more" type="button" class="btn btn-primary">More...</button>
+                <div id ="p1-more-info" style="display: none">
+                    <p>
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                    </p>
+                    <table style="border: 1px solid black; width: 100%">
+                        <tr style="border: 1px solid black; text-align: center">
+                            <th style="border: 1px solid black">a</th>
+                            <th style="border: 1px solid black">useless</th>
+                            <th style="border: 1px solid black">&lt; table &gt;</th>
+                        </tr>
+                        <tr style="border: 1px solid black" >
+                            <td style="border: 1px solid black">to meet</td>
+                            <td style="border: 1px solid black">the</td>
+                            <td style="border: 1px solid black">requirements</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button id="p1-less" type="button" class="btn btn-primary">Less...</button>
+                </div>
+            </div>
+            <div id="person2" class="col-12 col-sm-4 border border-primary">
+                <img src="images/person_2.png" class="img-fluid" alt="person2 image">
+                <h1>Efrayim Sztokman</h1>
+                <p>
+                    information information information information information information
+                    information information information information information information
+                    information information information information information information
+                    information information information information information information
+                    information information information information information information
+                </p>
+                <h2>email: *******@gmail.com</h2>
+                <button id="p2-more" type="button" class="btn btn-primary">More...</button>
+                <div id ="p2-more-info" style="display: none">
+                    <p>
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                        more information more information more information more information more information more information
+                    </p>
+                    <table style="border: 1px solid black; width: 100%">
+                        <tr style="border: 1px solid black; text-align: center">
+                            <th style="border: 1px solid black">a</th>
+                            <th style="border: 1px solid black">useless</th>
+                            <th style="border: 1px solid black">&lt; table &gt;</th>
+                        </tr>
+                        <tr style="border: 1px solid black" >
+                            <td style="border: 1px solid black">to meet</td>
+                            <td style="border: 1px solid black">the</td>
+                            <td style="border: 1px solid black">requirements</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button id="p2-less" type="button" class="btn btn-primary">Less...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
